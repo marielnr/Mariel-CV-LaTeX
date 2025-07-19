@@ -1,0 +1,215 @@
+\documentclass[11pt,a4paper]{article}
+
+% Required packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} % Changed to English
+\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm]{geometry} % Adjusted margins
+\usepackage{xcolor} % Custom colors
+\usepackage{enumitem} % For customized lists
+\usepackage{titlesec} % To customize section titles
+\usepackage{graphicx} % To include images
+\usepackage{parskip} % To improve spacing between paragraphs
+\usepackage{fancyhdr} % For headers and footers
+\usepackage{tikz} % For colored backgrounds and design
+\usepackage{ragged2e} % For \RaggedRight
+
+% Define colors
+\definecolor{darkblue}{RGB}{26,54,93} % Dark blue
+\definecolor{lightgray}{RGB}{200,200,200} % Light gray
+\definecolor{verylightgray}{RGB}{240,240,240} % Very light gray for backgrounds
+
+% Customize section titles
+\titleformat{\section}{\large\bfseries\color{darkblue}}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{black}}{}{0em}{}
+
+% Adjust spacing between sections
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+\titlespacing*{\subsection}{0pt}{0.6em}{0.3em}
+
+% Adjust spacing for lists
+\setlist[itemize]{leftmargin=*,itemsep=0.3em,topsep=0.3em}
+
+% Increase spacing between paragraphs
+\setlength{\parskip}{0.5em}
+
+\pagestyle{empty} % No page numbering
+
+\begin{document}
+
+% Header with colored background
+\begin{tikzpicture}[remember picture,overlay]
+    \fill[darkblue] (current page.north west) rectangle ([yshift=-3.5cm]current page.north east);
+\end{tikzpicture}
+
+% Header text
+\begin{center}
+    \color{white} % White text on blue background
+    {\LARGE\bfseries MARIEL NAVA RODRÍGUEZ} \\
+    \vspace{0.2em}
+    \textbf{Mechatronics Engineer} \\
+    \vspace{0.2em}
+    \small I am currently pursuing a Master's in Data Science at the Universitat Oberta de Catalunya
+\end{center}
+
+% Increase space after the header to lower the photo
+\vspace{2em}
+
+% Two-column layout using minipage
+\begin{minipage}[t]{0.3\textwidth}
+\RaggedRight
+
+% Photo (outside the gray box for a transparent margin)
+\includegraphics[width=\textwidth]{foto.jpeg} \\
+\vspace{1em} % Space after the photo
+
+% Gray box for the rest of the left column content
+\colorbox{verylightgray}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\RaggedRight
+\vspace{01em} % Space at the top inside the gray box
+
+% Left column: Personal information and skills
+\section*{Contact Information}
+\footnotesize
+\begin{itemize}
+    \item \textbf{Phone:} +34 691 634 506
+    \item \textbf{Email:} marielnava.rdz@outlook.com
+    \item \textbf{Location:} Barcelona, Spain
+    \item \textbf{Nationality:} Mexican, Spanish
+    \item \textbf{Driver's License:} B
+\end{itemize}
+\vspace{1em} % Add more space between sections
+
+\section*{Software and Skills}
+\footnotesize
+\begin{itemize}
+    \item EC-gfxProgram, DGLux, Visio,\\
+    Niagara
+    \item Power BI, SQL, Visual Studio Code
+    \item SolidWorks, SolidWorks Simulation, Revit
+    \item Python, C++, MATLAB, LabVIEW,\\
+    Assembly
+    \item Proteus, PLC Ladder (basic),\\
+    AutoCAD (basic)
+\end{itemize}
+\vspace{1em} % Add more space between sections
+
+\section*{Languages}
+\footnotesize
+\begin{itemize}
+    \item Spanish (Native)
+    \item English (C2, TOEFL 603)
+    \item Catalan (Basic 2)
+\end{itemize}
+\vspace{1em} % Add more space between sections
+
+\section*{Certifications}
+\footnotesize
+\begin{itemize}
+    \item SolidWorks Professional (2023)
+    \item SolidWorks Associate (2023)
+    \item Aerospace Missions Design (2022)
+    \item Railway Signaling (2024)
+\end{itemize}
+
+% Add extra space to extend the gray background to the bottom
+\vspace*{5.2em}
+
+\vspace{0.5em} % Space at the bottom inside the gray box
+}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.65\textwidth}
+\RaggedRight
+
+% Reduce initial space inside the right column
+\vspace*{-10em}
+
+% Work Experience
+\section*{Work Experience}
+\footnotesize
+
+\textbf{Engineer in Structural CMS Subsystem} \\
+AYESA, La Sagrera AV, Barcelona, Spain \\
+\textit{February 2024 -- Present}
+\begin{itemize}
+    \item Design of structural CMS subsystem (lateral signaling, ASFA, ERTMS, GSM-R).
+    \item Drafting technical reports and modified projects.
+    \item On-site problem inspection and resolution.
+    \item Documentation of tests and incident management.
+    \item Collaboration with the BIM team.
+\end{itemize}
+
+\vspace{1em} % Add more space between work experience entries
+
+\textbf{Software Engineer} \\
+Daemon Building Automation Services, Mexico \\
+\textit{February 2023 -- December 2023}
+\begin{itemize}
+    \item Programming with DGLux, EC-gfxProgram, Niagara, and Visio.
+    \item Development of interfaces for HVAC systems.
+    \item On-site system verification (Two Manhattan West, New York).
+\end{itemize}
+
+\vspace{1em} % Add more space between work experience entries
+
+\textbf{Junior Engineer} \\
+Sky10 Engineering and Ambientec, Mexico \\
+\textit{June 2022 -- February 2023}
+\begin{itemize}
+    \item Creation of HVAC interfaces.
+    \item On-site system inspection (Spiral, New York).
+    \item Ventilation calculations and equipment selection.
+\end{itemize}
+
+\vspace{1em} % Add more space between work experience entries
+
+\textbf{Engineering Workshop} \\
+Universidad Panamericana, Mexico \\
+\textit{January 2021 -- August 2022}
+\begin{itemize}
+    \item Teaching students to use machines and tools.
+    \item Working with electronic equipment.
+\end{itemize}
+
+\vspace*{2em}
+% Horizontal line
+{\color{lightgray}\hrule}
+
+% Education
+\section*{Education}
+\footnotesize
+
+\textbf{Master's in Data Science} \\
+Universitat Oberta de Catalunya, Spain (in progress) \\
+\textit{February 2025 -- December 2026}
+
+\vspace{1em} % Add more space between education entries
+
+\textbf{Specialization in Global Energy Projects} \\
+Universidad Panamericana, Mexico \\
+\textit{January 2023 -- December 2023}
+
+\vspace{1em} % Add more space between education entries
+
+\textbf{Mechatronics Engineering} \\
+Universidad Panamericana, Mexico \\
+\textit{January 2019 -- December 2022}
+
+\vspace*{2em}
+% Horizontal line
+{\color{lightgray}\hrule}
+
+% Other Experience
+\section*{Other Experience}
+\footnotesize
+\begin{itemize}
+    \item Beautiful Patterns: Programming for children.
+    \item Design and construction of a Go Kart from scratch.
+    \item Creation of an autonomous car in the sensor area.
+\end{itemize}
+
+% Add extra space to extend the content to the bottom
+\vspace*{\fill}
+
+\end{minipage}
+
+\end{document}
