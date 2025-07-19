@@ -1,9 +1,8 @@
-# CV de Mariel Nava Rodríguez
+# CV of Mariel Nava Rodríguez
 
-Este repositorio contiene el código LaTeX del CV de Mariel Nava Rodríguez, candidata a Data Engineer. El archivo `cv_mariel.tex` genera un CV profesional que incluye educación, proyectos y habilidades.
+This repository contains the LaTeX code for the CV of Mariel Nava Rodríguez, a Data Engineer candidate. The file `cv_mariel.tex` is the source code of the CV, but it does not include the generated PDF since it was not compiled locally.
 
-## Instrucciones
-1. Instala una distribución de LaTeX (como TeX Live o MiKTeX).
-2. Compila el archivo con:
-   ```bash
-   latexmk -pdf cv_mariel.tex
+## Instructions
+- To view the CV, download the `cv_mariel.tex` file and compile it with a LaTeX distribution (such as TeX Live or MiKTeX) using:
+  ```bash
+  latexmk -pdf cv_mariel.tex
