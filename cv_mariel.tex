@@ -2,28 +2,28 @@
 
 % Required packages
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel} % Changed to English
-\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm]{geometry} % Adjusted margins
-\usepackage{xcolor} % Custom colors
-\usepackage{enumitem} % For customized lists
-\usepackage{titlesec} % To customize section titles
-\usepackage{graphicx} % To include images
-\usepackage{parskip} % To improve spacing between paragraphs
-\usepackage{fancyhdr} % For headers and footers
-\usepackage{tikz} % For colored backgrounds and design
-\usepackage{ragged2e} % For \RaggedRight
+\usepackage[english]{babel} % English language
+\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm]{geometry} % Margins
+\usepackage{xcolor} % Colors
+\usepackage{enumitem} % Customized lists
+\usepackage{titlesec} % Section title formatting
+\usepackage{graphicx} % Images
+\usepackage{parskip} % Spacing between paragraphs
+\usepackage{fancyhdr} % Headers/footers
+\usepackage{tikz} % Colored backgrounds/design
+\usepackage{ragged2e} % For \justifying
 
 % Define colors
 \definecolor{darkblue}{RGB}{26,54,93} % Dark blue
 \definecolor{lightgray}{RGB}{200,200,200} % Light gray
-\definecolor{verylightgray}{RGB}{240,240,240} % Very light gray for backgrounds
+\definecolor{verylightgray}{RGB}{240,240,240} % Very light gray backgrounds
 
 % Customize section titles
 \titleformat{\section}{\large\bfseries\color{darkblue}}{}{0em}{}
 \titleformat{\subsection}{\normalsize\bfseries\color{black}}{}{0em}{}
 
 % Adjust spacing between sections
-\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+\titlespacing*{\section}{0pt}{1.2em}{.6em}
 \titlespacing*{\subsection}{0pt}{0.6em}{0.3em}
 
 % Adjust spacing for lists
@@ -38,7 +38,7 @@
 
 % Header with colored background
 \begin{tikzpicture}[remember picture,overlay]
-    \fill[darkblue] (current page.north west) rectangle ([yshift=-3.5cm]current page.north east);
+    \fill[darkblue] (current page.north west) rectangle ([yshift=-3cm]current page.north east);
 \end{tikzpicture}
 
 % Header text
@@ -46,25 +46,25 @@
     \color{white} % White text on blue background
     {\LARGE\bfseries MARIEL NAVA RODRÍGUEZ} \\
     \vspace{0.2em}
-    \textbf{Mechatronics Engineer} \\
+    \small Data Analyst\\
     \vspace{0.2em}
-    \small I am currently pursuing a Master's in Data Science at the Universitat Oberta de Catalunya
+    \small Transitioning Mechatronics Engineer into Data Engineering.
 \end{center}
 
 % Increase space after the header to lower the photo
-\vspace{2em}
+\vspace{1.4em}
 
 % Two-column layout using minipage
-\begin{minipage}[t]{0.3\textwidth}
-\RaggedRight
+\begin{minipage}[t]{.3\textwidth}
+\justifying
 
-% Photo (outside the gray box for a transparent margin)
-\includegraphics[width=\textwidth]{foto.jpeg} \\
-\vspace{1em} % Space after the photo
+% Photo with controlled height
+\includegraphics[width=\textwidth,height=6cm,keepaspectratio]{foto.jpeg} \\
+\vspace{1.5em} % Space after the photo
 
 % Gray box for the rest of the left column content
-\colorbox{verylightgray}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\RaggedRight
-\vspace{01em} % Space at the top inside the gray box
+\colorbox{verylightgray}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\justifying
+\vspace{.6em} % Space at the top inside the gray box
 
 % Left column: Personal information and skills
 \section*{Contact Information}
@@ -75,22 +75,20 @@
     \item \textbf{Location:} Barcelona, Spain
     \item \textbf{Nationality:} Mexican, Spanish
     \item \textbf{Driver's License:} B
+    \item \textbf{GitHub:} https://github.com/marielnr
 \end{itemize}
-\vspace{1em} % Add more space between sections
+\vspace{1em}
 
 \section*{Software and Skills}
 \footnotesize
 \begin{itemize}
-    \item EC-gfxProgram, DGLux, Visio,\\
-    Niagara
-    \item Power BI, SQL, Visual Studio Code
+    \item Power BI, SQL, Visual Studio Code, Spoon, PostgreSQL
+    \item Python (pandas, numpy, pytest, scipy, etc.), C++, MATLAB, LabVIEW,\\Assembly
+    \item EC-gfxProgram, DGLux, Visio, \\Niagara
     \item SolidWorks, SolidWorks Simulation, Revit
-    \item Python, C++, MATLAB, LabVIEW,\\
-    Assembly
-    \item Proteus, PLC Ladder (basic),\\
-    AutoCAD (basic)
+    \item Proteus, PLC Ladder (basic), \\AutoCAD, Advanced Excel
 \end{itemize}
-\vspace{1em} % Add more space between sections
+\vspace{1em}
 
 \section*{Languages}
 \footnotesize
@@ -99,7 +97,7 @@
     \item English (C2, TOEFL 603)
     \item Catalan (Basic 2)
 \end{itemize}
-\vspace{1em} % Add more space between sections
+\vspace{1em}
 
 \section*{Certifications}
 \footnotesize
@@ -110,18 +108,15 @@
     \item Railway Signaling (2024)
 \end{itemize}
 
-% Add extra space to extend the gray background to the bottom
-\vspace*{5.2em}
-
-\vspace{0.5em} % Space at the bottom inside the gray box
+\vspace*{3em} % Reduced space at bottom inside gray box
 }}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.65\textwidth}
-\RaggedRight
+\justifying
 
-% Reduce initial space inside the right column
-\vspace*{-10em}
+% Adjusted vertical space to avoid overlap
+\vspace*{-14.5em}
 
 % Work Experience
 \section*{Work Experience}
@@ -131,25 +126,25 @@
 AYESA, La Sagrera AV, Barcelona, Spain \\
 \textit{February 2024 -- Present}
 \begin{itemize}
-    \item Design of structural CMS subsystem (lateral signaling, ASFA, ERTMS, GSM-R).
-    \item Drafting technical reports and modified projects.
-    \item On-site problem inspection and resolution.
-    \item Documentation of tests and incident management.
-    \item Collaboration with the BIM team.
+    \item Designed of lateral signaling, ASFA, ERTMS, GSM-R, supporting decision-making across CMS subsystem development.
+    \item Delivered weekly technical reports and modified projects.
+    \item Collected, structured, and analyzed technical data from on-site inspections, system tests, and incident reports, enabling traceability, issue resolution, and performance monitoring.
+    \item Generated documentation of tests and incident management.
+    \item Collaborated with BIM and multi-disciplinary teams, integrating project data across platforms (AutoCAD, Revit, BIM 360), and facilitating coordination between civil, electrical, and signaling systems.
 \end{itemize}
 
-\vspace{1em} % Add more space between work experience entries
+\vspace{1em}
 
 \textbf{Software Engineer} \\
 Daemon Building Automation Services, Mexico \\
 \textit{February 2023 -- December 2023}
 \begin{itemize}
-    \item Programming with DGLux, EC-gfxProgram, Niagara, and Visio.
-    \item Development of interfaces for HVAC systems.
+    \item Developed interfaces for HVAC control and monitoring systems using DGLux, EC-gfxProgram, Niagara, and Visio, with emphasis on real-time data visualization, trend analysis, and alarm management.
+    \item Programmed custom scripts and control logic based on client-specific requirements, enabling tailored system behavior and enhanced user interaction.
     \item On-site system verification (Two Manhattan West, New York).
 \end{itemize}
 
-\vspace{1em} % Add more space between work experience entries
+\vspace{1em}
 
 \textbf{Junior Engineer} \\
 Sky10 Engineering and Ambientec, Mexico \\
@@ -160,7 +155,7 @@ Sky10 Engineering and Ambientec, Mexico \\
     \item Ventilation calculations and equipment selection.
 \end{itemize}
 
-\vspace{1em} % Add more space between work experience entries
+\vspace{1em}
 
 \textbf{Engineering Workshop} \\
 Universidad Panamericana, Mexico \\
@@ -171,7 +166,6 @@ Universidad Panamericana, Mexico \\
 \end{itemize}
 
 \vspace*{2em}
-% Horizontal line
 {\color{lightgray}\hrule}
 
 % Education
@@ -182,20 +176,19 @@ Universidad Panamericana, Mexico \\
 Universitat Oberta de Catalunya, Spain (in progress) \\
 \textit{February 2025 -- December 2026}
 
-\vspace{1em} % Add more space between education entries
+\vspace{1em}
 
 \textbf{Specialization in Global Energy Projects} \\
 Universidad Panamericana, Mexico \\
 \textit{January 2023 -- December 2023}
 
-\vspace{1em} % Add more space between education entries
+\vspace{1em}
 
 \textbf{Mechatronics Engineering} \\
 Universidad Panamericana, Mexico \\
 \textit{January 2019 -- December 2022}
 
 \vspace*{2em}
-% Horizontal line
 {\color{lightgray}\hrule}
 
 % Other Experience
@@ -207,7 +200,6 @@ Universidad Panamericana, Mexico \\
     \item Creation of an autonomous car in the sensor area.
 \end{itemize}
 
-% Add extra space to extend the content to the bottom
 \vspace*{\fill}
 
 \end{minipage}
