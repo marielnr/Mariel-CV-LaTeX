@@ -5,6 +5,9 @@ The file [`cv_mariel.tex`](./cv_mariel.tex) is the main source file.
 
 ---
 
+<img width="1670" height="917" alt="image" src="https://github.com/user-attachments/assets/cf675108-d881-4ed2-a6e7-6ce6619490a9" />
+
+
 ## 🛠️ Instructions
 
 To view or edit the CV:
